@@ -1,0 +1,50 @@
+C:\Users\DELL\source\repos\LoginForm\LoginForm\bin\Debug\Database.mdf
+C:\Users\DELL\source\repos\LoginForm\LoginForm\bin\Debug\Database_log.ldf
+C:\Users\DELL\source\repos\LoginForm\LoginForm\bin\Debug\LoginForm.exe.config
+C:\Users\DELL\source\repos\LoginForm\LoginForm\bin\Debug\LoginForm.exe
+C:\Users\DELL\source\repos\LoginForm\LoginForm\bin\Debug\LoginForm.pdb
+C:\Users\DELL\source\repos\LoginForm\LoginForm\obj\Debug\ManagementApplication.csprojAssemblyReference.cache
+C:\Users\DELL\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.OrderForm.resources
+C:\Users\DELL\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.LoginForm.resources
+C:\Users\DELL\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.Properties.Resources.resources
+C:\Users\DELL\source\repos\LoginForm\LoginForm\obj\Debug\ManagementApplication.csproj.GenerateResource.cache
+C:\Users\DELL\source\repos\LoginForm\LoginForm\obj\Debug\ManagementApplication.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.exe
+C:\Users\DELL\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.pdb
+C:\Users\DELL\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.InitForm.resources
+C:\Users\DELL\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.EditForm.resources
+C:\Users\DELL\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.MenuView.resources
+C:\Users\DELL\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.MaintenanceForm.resources
+C:\Users\DELL\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.AddForm.resources
+C:\Users\DELL\Desktop\LoginForm\LoginForm\bin\Debug\Database.mdf
+C:\Users\DELL\Desktop\LoginForm\LoginForm\bin\Debug\Database_log.ldf
+C:\Users\DELL\Desktop\LoginForm\LoginForm\bin\Debug\LoginForm.exe.config
+C:\Users\DELL\Desktop\LoginForm\LoginForm\bin\Debug\LoginForm.exe
+C:\Users\DELL\Desktop\LoginForm\LoginForm\bin\Debug\LoginForm.pdb
+C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\ManagementApplication.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\LoginForm.AddForm.resources
+C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\LoginForm.EditForm.resources
+C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\LoginForm.InitForm.resources
+C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\LoginForm.MaintenanceForm.resources
+C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\LoginForm.MenuView.resources
+C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\LoginForm.OrderForm.resources
+C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\LoginForm.LoginForm.resources
+C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\LoginForm.Properties.Resources.resources
+C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\ManagementApplication.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\ManagementApplication.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\LoginForm.exe
+C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\LoginForm.pdb
+C:\Users\DELL\source\repos\SFCS Management\LoginForm\bin\Debug\LoginForm.exe.config
+C:\Users\DELL\source\repos\SFCS Management\LoginForm\bin\Debug\LoginForm.exe
+C:\Users\DELL\source\repos\SFCS Management\LoginForm\bin\Debug\LoginForm.pdb
+C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\ManagementApplication.csprojAssemblyReference.cache
+C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\LoginForm.EditForm.resources
+C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\LoginForm.MaintenanceForm.resources
+C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\LoginForm.MenuView.resources
+C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\LoginForm.OrderForm.resources
+C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\LoginForm.LoginForm.resources
+C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\LoginForm.Properties.Resources.resources
+C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\ManagementApplication.csproj.GenerateResource.cache
+C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\ManagementApplication.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\LoginForm.exe
+C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\LoginForm.pdb
