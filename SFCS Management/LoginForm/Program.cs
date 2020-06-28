@@ -78,12 +78,37 @@ namespace SFCSManagement
             return dt;
         }
 
+        public static DataTable getMenu(int VendorID)
+        {
+            SqlConnection sql_cnt = new SqlConnection(ConnectString.connectString);
+            sql_cnt.Open();
+            SqlCommand scmd = new SqlCommand("select * from ItemDB where VendorID = @VendorID", sql_cnt);
+            scmd.Parameters.AddWithValue("@VendorID", VendorID.ToString());
+            SqlDataAdapter sda = new SqlDataAdapter(scmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            scmd.ExecuteNonQuery();
+            sql_cnt.Close();
+
+            return dt;
+        }
+
+        public static void DeleteItem(int ItemID)
+        {
+            SqlConnection sql_cnt = new SqlConnection(ConnectString.connectString);
+            sql_cnt.Open();
+            SqlCommand scmd = new SqlCommand("delete from ItemDB where ID = @ItemID", sql_cnt);
+            scmd.Parameters.AddWithValue("@ItemID", ItemID);
+            scmd.ExecuteNonQuery();
+            sql_cnt.Close();
+        }
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OrderListView(1));
+            Application.Run(new LoginForm());
         }
     }
 }

@@ -2,179 +2,150 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace SFCSManagement
 {
     public partial class MenuView : Form
     {
-        public Menu model;
-        public MenuController controller;
+        int VendorID = new int();
 
-        public MenuView()
+        public MenuView(int VendorID)
         {
-            controller = new MenuController();
-            model = controller.model;
-
+            this.VendorID = VendorID;
             InitializeComponent();
-
             viewMenu();
-        }
-
-        private void pbImage_DoubleClick(object sender, EventArgs e, String itemId)
-        { 
-            EditForm editForm = new EditForm();
-            editForm.Name = itemId;
-            editForm.btnSave.Click += (btnSave_sender, EventArgs) => { btnSave_Click(sender, EventArgs, itemId); };
-            editForm.FormClosed += new FormClosedEventHandler(childForm_FormClosed);
-            editForm.Show(this);
-
-            SqlConnection sql_cnt = new SqlConnection(ConnectString.connectString);
-            sql_cnt.Open();
-
-            SqlCommand scmd = new SqlCommand("select * from ItemDB where id = @itemId", sql_cnt);
-            scmd.Parameters.AddWithValue("@itemID", itemId);
-
-            SqlDataAdapter sda = new SqlDataAdapter(scmd);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-
-            scmd.ExecuteNonQuery();
-            sql_cnt.Close();
-
-            editForm.txtName.Text = dt.Rows[0]["name"].ToString();
-            editForm.txtDes.Text = dt.Rows[0]["description"].ToString();
-            editForm.txtPrice.Text = dt.Rows[0]["price"].ToString();
-            editForm.txtStatus.Text = (dt.Rows[0]["available"].ToString() == "True") ? "1" : "0";
-        }
-
-        private void add_btn_Click(object sender, EventArgs e)
-        {
-            //AddForm addForm = new AddForm();
-            //addForm.FormClosed += new FormClosedEventHandler(childForm_FormClosed);
-            ///addForm.Show(this);
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSave_Click(object sender, EventArgs e, String itemId)
-        {
-            /*foreach(Item item in model.menu)
-            {
-                if (item.id.ToString() == itemId)
-                {
-                    EditForm;
-
-                }
-            }*/
-        }
-
-        private void childForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            controller.getAllItem(ref model);
-            viewMenu();
-        }
-
-        private void btnOrder_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            lbVendorName.Text = Program.getVendorName(VendorID).ToUpper();
         }
 
         private void viewMenu()
         {
-            pnlMenu.Controls.Clear();
+            DataTable dt = Program.getMenu(VendorID);
 
-            #region DisplayMenu 
-
-            int idx;
-
-            //Create panel for each item
-            for (idx = 0; idx < model.menu.Count; ++idx)
+            for (int i = 0; i < dt.Rows.Count; ++i)
             {
-                Item item = model.menu[idx];
-
                 Panel pnlItem = new Panel();
-                PictureBox pbImage = new PictureBox();
-                TextBox txtName = new TextBox();
-                TextBox txtDes = new TextBox();
-                Label lbPrice = new Label();
-                Label lbAvailable = new Label();
+                Panel pnlLine = new Panel();
+                Label lbItemName = new Label();
+                PictureBox pbItemImage = new PictureBox();
+                Label lbSymbolVND = new Label();
+                Label lbItemPrice = new Label();
+                Label lbItemAvailable = new Label();
+                Button btnDel = new Button();
+                Button btnEdit = new Button();
+                Label lbDescription = new Label();
 
                 pnlMenu.Controls.Add(pnlItem);
-                pnlItem.Controls.Add(pbImage);
-                pnlItem.Controls.Add(txtName);
-                pnlItem.Controls.Add(txtDes);
-                pnlItem.Controls.Add(lbPrice);
-                pnlItem.Controls.Add(lbAvailable);
 
-                pnlItem.Location = new Point(32 + 216 * (idx % 3), 32 + 288 * (idx / 3));
-                pnlItem.Size = new Size(170, 262);
-                pnlItem.BackColor = Color.White;
+                pnlItem.Controls.Add(lbDescription);
+                pnlItem.Controls.Add(btnEdit);
+                pnlItem.Controls.Add(btnDel);
+                pnlItem.Controls.Add(lbItemAvailable);
+                pnlItem.Controls.Add(lbItemPrice);
+                pnlItem.Controls.Add(lbSymbolVND);
+                pnlItem.Controls.Add(pnlLine);
+                pnlItem.Controls.Add(lbItemName);
+                pnlItem.Controls.Add(pbItemImage);
+                pnlItem.Location = new System.Drawing.Point(13, 180 + 119 * i);
+                pnlItem.Size = new System.Drawing.Size(650, 119);
 
-                pbImage.Location = new Point(2, 2);
-                pbImage.Size = new Size(165, 134);
-                pbImage.Name = item.id.ToString();
-                pbImage.BorderStyle = BorderStyle.FixedSingle;
-                pbImage.DoubleClick += (sender, EventArgs) => { pbImage_DoubleClick(sender, EventArgs, pbImage.Name); };
+                pnlLine.BackColor = System.Drawing.Color.Gray;
+                pnlLine.Location = new System.Drawing.Point(2, 112);
+                pnlLine.Size = new System.Drawing.Size(640, 1);
 
-                txtName.Location = new Point(6, 141);
-                txtName.Size = new Size(161, 45);
-                txtName.BorderStyle = BorderStyle.None;
-                txtName.Font = new Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                txtName.Multiline = true;
-                txtName.Text = item.name.ToString();
-                txtName.ReadOnly = true;
-                txtName.BackColor = pnlItem.BackColor;
+                lbItemName.AutoSize = true;
+                lbItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                lbItemName.Location = new System.Drawing.Point(111, 3);
+                lbItemName.Text = dt.Rows[i]["Name"].ToString();
 
-                txtDes.Location = new Point(6, 190);
-                txtDes.Size = new Size(161, 42);
-                txtDes.BorderStyle = BorderStyle.None;
-                txtDes.Font = new Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                txtDes.Multiline = true;
-                txtDes.Text = item.description.ToString();
-                txtDes.ReadOnly = true;
-                txtDes.BackColor = pnlItem.BackColor;
+                pbItemImage.Location = new System.Drawing.Point(3, 3);
+                pbItemImage.Size = new System.Drawing.Size(104, 104);
+                pbItemImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+                if (!dt.Rows[i]["Image"].Equals(System.DBNull.Value))
+                {
+                    Byte[] data = (Byte[])(dt.Rows[i]["Image"]);
+                    MemoryStream mem = new MemoryStream(data);
+                    pbItemImage.Image = Image.FromStream(mem);
+                }
+                else pbItemImage.Image = pictureBox1.Image;
+                
+                lbSymbolVND.AutoSize = true;
+                lbSymbolVND.Location = new System.Drawing.Point(410, 42);
+                lbSymbolVND.Text = "đ";
 
-                lbPrice.Location = new Point(3, 236);
-                lbPrice.Size = new Size(85, 16);
-                lbPrice.Font = new Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                lbPrice.Text = item.price.ToString() + " VND";
+                lbItemPrice.AutoSize = true;
+                lbItemPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                lbItemPrice.Location = new System.Drawing.Point(422, 42);
+                lbItemPrice.Text = dt.Rows[i]["Price"].ToString();
 
-                lbAvailable.Location = new Point(120, 238);
-                lbAvailable.Size = new Size(40, 14);
-                lbAvailable.Text = (item.available.ToString() == "False") ? "Đã hết" : "";
+                lbItemAvailable.AutoSize = true;
+                lbItemAvailable.ForeColor = System.Drawing.Color.Red;
+                lbItemAvailable.Location = new System.Drawing.Point(113, 36);
+                lbItemAvailable.Text = ((bool)dt.Rows[i]["Available"] == false) ? "Đã hết" : "";
+
+                btnDel.BackColor = System.Drawing.Color.Red;
+                btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                btnDel.ForeColor = System.Drawing.Color.White;
+                btnDel.Location = new System.Drawing.Point(572, 36);
+                btnDel.Size = new System.Drawing.Size(71, 35);
+                btnDel.Text = "Xóa";
+                btnDel.UseVisualStyleBackColor = false;
+                btnDel.Name = dt.Rows[i]["ID"].ToString();
+                btnDel.Click += new System.EventHandler(this.btnDel_Click);
+
+
+                btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
+                btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                btnEdit.ForeColor = System.Drawing.Color.White;
+                btnEdit.Location = new System.Drawing.Point(496, 36);
+                btnEdit.Size = new System.Drawing.Size(71, 35);
+                btnEdit.Text = "Sửa";
+                btnEdit.UseVisualStyleBackColor = false;
+                btnEdit.Name = dt.Rows[i]["ID"].ToString();
+                btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+
+                lbDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                lbDescription.Location = new System.Drawing.Point(112, 56);
+                lbDescription.Size = new System.Drawing.Size(228, 51);
+                lbDescription.Text = dt.Rows[i]["Description"].ToString();
             }
+            pnlGap.Location = new Point(pnlGap.Location.X, 180 + 119 * dt.Rows.Count);
+        }
 
-            //Create Add panel
-            Panel pnlAdd = new Panel();
-            PictureBox add_btn = new PictureBox();
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            OrderListView orderListView = new OrderListView(VendorID);
+            this.Hide();
+            orderListView.ShowDialog();
+            this.Close();
+        }
 
-            pnlMenu.Controls.Add(pnlAdd);
-            pnlAdd.Controls.Add(add_btn);
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            EditForm editForm = new EditForm(VendorID);
+            this.Hide();
+            editForm.ShowDialog();
+            this.Close();
+        }
 
-            pnlAdd.Location = new Point(32 + 216 * (idx % 3), 32 + 288 * (idx / 3));
-            pnlAdd.Size = new Size(170, 262);
-            pnlAdd.BackColor = Color.WhiteSmoke;
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            Program.DeleteItem(Int32.Parse(((Button)sender).Name));
+            MenuView menuView = new MenuView(VendorID);
+            this.Hide();
+            menuView.ShowDialog();
+            this.Close();
+        }
 
-            //add_btn.Image = Properties.Resources.add_btn;
-            add_btn.Location = new System.Drawing.Point(45, 90);
-            add_btn.Size = new System.Drawing.Size(80, 80);
-            add_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            add_btn.Click += (sender, EventArgs) => { add_btn_Click(sender, EventArgs); };
-
-            //Create gap to the end of the page
-            Panel pnlGap = new Panel();
-
-            pnlMenu.Controls.Add(pnlGap);
-
-            pnlGap.Location = new Point(0, 32 + 288 * (idx / 3) + 288);
-            pnlGap.Size = new Size(40, 40);
-
-            #endregion DisplayMenu
-
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            EditForm editForm = new EditForm(VendorID, Int32.Parse(((Button)sender).Name));
+            this.Hide();
+            editForm.ShowDialog();
+            this.Close();
         }
     }
 }

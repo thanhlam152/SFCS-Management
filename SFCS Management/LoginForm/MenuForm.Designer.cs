@@ -28,70 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuView));
+            this.pnlSystem = new System.Windows.Forms.Panel();
+            this.pbLogoCSE = new System.Windows.Forms.PictureBox();
+            this.lbSystemName = new System.Windows.Forms.Label();
+            this.pbLogoHCMUT = new System.Windows.Forms.PictureBox();
+            this.pnlOption = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlBorder = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.pnlGap = new System.Windows.Forms.Panel();
+            this.lbMenu = new System.Windows.Forms.Label();
+            this.lbVendorName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlSystem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoCSE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoHCMUT)).BeginInit();
+            this.pnlOption.SuspendLayout();
+            this.pnlMenu.SuspendLayout();
+            this.pnlGap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlSystem
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1084, 89);
-            this.panel1.TabIndex = 0;
+            this.pnlSystem.BackColor = System.Drawing.Color.LightGray;
+            this.pnlSystem.Controls.Add(this.pbLogoCSE);
+            this.pnlSystem.Controls.Add(this.lbSystemName);
+            this.pnlSystem.Controls.Add(this.pbLogoHCMUT);
+            this.pnlSystem.Location = new System.Drawing.Point(0, -1);
+            this.pnlSystem.Name = "pnlSystem";
+            this.pnlSystem.Size = new System.Drawing.Size(1084, 89);
+            this.pnlSystem.TabIndex = 0;
             // 
-            // pictureBox2
+            // pbLogoCSE
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(991, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
+            this.pbLogoCSE.Image = ((System.Drawing.Image)(resources.GetObject("pbLogoCSE.Image")));
+            this.pbLogoCSE.Location = new System.Drawing.Point(991, 11);
+            this.pbLogoCSE.Name = "pbLogoCSE";
+            this.pbLogoCSE.Size = new System.Drawing.Size(70, 70);
+            this.pbLogoCSE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogoCSE.TabIndex = 12;
+            this.pbLogoCSE.TabStop = false;
             // 
-            // label5
+            // lbSystemName
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
-            this.label5.Location = new System.Drawing.Point(116, 27);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(310, 30);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Smart Food Court System";
+            this.lbSystemName.AutoSize = true;
+            this.lbSystemName.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSystemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
+            this.lbSystemName.Location = new System.Drawing.Point(116, 27);
+            this.lbSystemName.Name = "lbSystemName";
+            this.lbSystemName.Size = new System.Drawing.Size(310, 30);
+            this.lbSystemName.TabIndex = 11;
+            this.lbSystemName.Text = "Smart Food Court System";
             // 
-            // pictureBox1
+            // pbLogoHCMUT
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(29, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.pbLogoHCMUT.Image = ((System.Drawing.Image)(resources.GetObject("pbLogoHCMUT.Image")));
+            this.pbLogoHCMUT.Location = new System.Drawing.Point(29, 11);
+            this.pbLogoHCMUT.Name = "pbLogoHCMUT";
+            this.pbLogoHCMUT.Size = new System.Drawing.Size(70, 70);
+            this.pbLogoHCMUT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogoHCMUT.TabIndex = 10;
+            this.pbLogoHCMUT.TabStop = false;
             // 
-            // panel2
+            // pnlOption
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
-            this.panel2.Controls.Add(this.btnMenu);
-            this.panel2.Controls.Add(this.btnOrder);
-            this.panel2.Location = new System.Drawing.Point(0, 87);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(230, 548);
-            this.panel2.TabIndex = 1;
+            this.pnlOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
+            this.pnlOption.Controls.Add(this.btnMenu);
+            this.pnlOption.Controls.Add(this.btnOrder);
+            this.pnlOption.Location = new System.Drawing.Point(0, 87);
+            this.pnlOption.Name = "pnlOption";
+            this.pnlOption.Size = new System.Drawing.Size(230, 548);
+            this.pnlOption.TabIndex = 1;
             // 
             // btnMenu
             // 
@@ -124,22 +135,80 @@
             this.btnOrder.UseVisualStyleBackColor = false;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
-            // panel3
+            // pnlBorder
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
-            this.panel3.Location = new System.Drawing.Point(213, 87);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(871, 10);
-            this.panel3.TabIndex = 2;
+            this.pnlBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
+            this.pnlBorder.Location = new System.Drawing.Point(213, 87);
+            this.pnlBorder.Name = "pnlBorder";
+            this.pnlBorder.Size = new System.Drawing.Size(871, 10);
+            this.pnlBorder.TabIndex = 2;
             // 
             // pnlMenu
             // 
             this.pnlMenu.AutoScroll = true;
             this.pnlMenu.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMenu.Controls.Add(this.btnAdd);
+            this.pnlMenu.Controls.Add(this.pnlGap);
+            this.pnlMenu.Controls.Add(this.lbMenu);
+            this.pnlMenu.Controls.Add(this.lbVendorName);
             this.pnlMenu.Location = new System.Drawing.Point(233, 101);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(851, 534);
             this.pnlMenu.TabIndex = 1;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(700, 158);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(89, 44);
+            this.btnAdd.TabIndex = 8;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // pnlGap
+            // 
+            this.pnlGap.Controls.Add(this.pictureBox1);
+            this.pnlGap.Location = new System.Drawing.Point(16, 225);
+            this.pnlGap.Name = "pnlGap";
+            this.pnlGap.Size = new System.Drawing.Size(812, 129);
+            this.pnlGap.TabIndex = 3;
+            // 
+            // lbMenu
+            // 
+            this.lbMenu.AutoSize = true;
+            this.lbMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMenu.Location = new System.Drawing.Point(360, 97);
+            this.lbMenu.Name = "lbMenu";
+            this.lbMenu.Size = new System.Drawing.Size(152, 29);
+            this.lbMenu.TabIndex = 2;
+            this.lbMenu.Text = "THỰC ĐƠN";
+            // 
+            // lbVendorName
+            // 
+            this.lbVendorName.AutoSize = true;
+            this.lbVendorName.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVendorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
+            this.lbVendorName.Location = new System.Drawing.Point(33, 17);
+            this.lbVendorName.Name = "lbVendorName";
+            this.lbVendorName.Size = new System.Drawing.Size(215, 38);
+            this.lbVendorName.TabIndex = 1;
+            this.lbVendorName.Text = "VENDOR NAME";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(24, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
             // MenuView
             // 
@@ -148,34 +217,43 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1083, 635);
             this.Controls.Add(this.pnlMenu);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlBorder);
+            this.Controls.Add(this.pnlOption);
+            this.Controls.Add(this.pnlSystem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MenuView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnlSystem.ResumeLayout(false);
+            this.pnlSystem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoCSE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoHCMUT)).EndInit();
+            this.pnlOption.ResumeLayout(false);
+            this.pnlMenu.ResumeLayout(false);
+            this.pnlMenu.PerformLayout();
+            this.pnlGap.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel pnlSystem;
+        private System.Windows.Forms.Panel pnlOption;
+        private System.Windows.Forms.Panel pnlBorder;
+        private System.Windows.Forms.Label lbSystemName;
+        private System.Windows.Forms.PictureBox pbLogoHCMUT;
+        private System.Windows.Forms.PictureBox pbLogoCSE;
         public System.Windows.Forms.Button btnMenu;
         public System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.Label lbVendorName;
+        private System.Windows.Forms.Label lbMenu;
+        private System.Windows.Forms.Panel pnlGap;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -92,14 +92,18 @@ namespace SFCSManagement
         private void btnView_Click(object sender, EventArgs e)
         {
             int OrderID = Int32.Parse(((Button)sender).Name);
-            OrderDetailsView orderDetailsView = new OrderDetailsView(OrderID);
+            OrderDetailsView orderDetailsView = new OrderDetailsView(VendorID, OrderID);
+            this.Hide();
             orderDetailsView.ShowDialog();
             this.Close();
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-
+            MenuView menuView = new MenuView(VendorID);
+            this.Hide();
+            menuView.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -16,10 +16,10 @@ namespace SFCSManagement
     {
         private int VendorID = new int();
         private int OrderID = new int();
-        public OrderDetailsView(int OrderID)
+        public OrderDetailsView(int VendorID, int OrderID)
         {
+            this.VendorID = VendorID;
             this.OrderID = OrderID;
-            this.VendorID = getVendorIDByOrderID(OrderID);
             InitializeComponent();
             lbOrderID.Text += OrderID.ToString();
             lbVendorName.Text = Program.getVendorName(VendorID).ToUpper();
@@ -80,6 +80,7 @@ namespace SFCSManagement
         private void btnBack_Click(object sender, EventArgs e)
         {
             OrderListView orderListView = new OrderListView(VendorID);
+            this.Hide();
             orderListView.ShowDialog();
             this.Close();
         }
@@ -118,7 +119,10 @@ namespace SFCSManagement
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-         
+            MenuView menuView = new MenuView(VendorID);
+            this.Hide();
+            menuView.ShowDialog();
+            this.Close();
         }
     }
 }

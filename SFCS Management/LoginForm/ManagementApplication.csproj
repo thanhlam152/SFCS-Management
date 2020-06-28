@@ -110,7 +110,7 @@
     <EmbeddedResource Include="MaintenanceForm.resx">
       <DependentUpon>MaintenanceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuForm.resx">
+    <EmbeddedResource Include="MenuView.resx">
       <DependentUpon>MenuView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderDetailsView.resx">

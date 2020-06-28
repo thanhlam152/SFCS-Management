@@ -8,14 +8,11 @@ namespace SFCSManagement
 {
     public class Item
     {
-        public int id {get; }
-        public String name { get; set; }
-        public String description { get; set; }
-        public Int64 price { get; set; }
-        public bool available { get; set; }
-        public Item(int itemId)
-        {
-            this.id = itemId;
-        }
+        public int ID {get; }
+        public String Name { get; set; }
+        public String Description { get; set; }
+        public Int64 Price { get; set; }
+        public bool Available { get; set; }
+        public int VendorID { get; set; }
     }
 }

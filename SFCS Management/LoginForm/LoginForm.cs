@@ -64,6 +64,7 @@ namespace SFCSManagement
                 if (vendorID == -1) txtError.Text = "Không tìm thấy tài khoản.";
                 else
                 {
+                    this.Hide();
                     txtError.Text = vendorID.ToString();
                     switch(type)
                     {
@@ -71,20 +72,18 @@ namespace SFCSManagement
                             //Program.openMaintenanceForm();
                             MaintenanceForm maintenanceForm = new MaintenanceForm();
                             maintenanceForm.ShowDialog();
-                            this.Close();
                             break;
                         case 1:
-                            this.Close();
                             break;
                         case 2:
                             OrderListView orderForm = new OrderListView(vendorID);
                             orderForm.ShowDialog();
-                            this.Close();
                             break;
                         default:
                             MessageBox.Show("Vui lòng kiểm tra lại database");
                             break;
                     }
+                    this.Close();
                 }
             }
         }
