@@ -15,6 +15,7 @@ namespace SFCSManagement
         public LoginForm()
         {
             InitializeComponent();
+            lbError.Text = "";
         }
 
         static int type = 0;
@@ -52,20 +53,19 @@ namespace SFCSManagement
         {
             String username = txtUsername.Text;
             String password = txtPassword.Text;
-            txtError.Text = "";
+            lbError.Text = "";
 
             if (username == String.Empty || password == String.Empty)
             {
-                txtError.Text = "Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu";
+                lbError.Text = "Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu";
             }
             else
             {
                 int vendorID = Authentication.authenticate(username, password, type);
-                if (vendorID == -1) txtError.Text = "Không tìm thấy tài khoản.";
+                if (vendorID == -1) lbError.Text = "Không tìm thấy tài khoản.";
                 else
                 {
                     this.Hide();
-                    txtError.Text = vendorID.ToString();
                     switch(type)
                     {
                         case 0:

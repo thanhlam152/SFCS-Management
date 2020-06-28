@@ -123,7 +123,7 @@
             this.txtAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAvailable.Location = new System.Drawing.Point(182, 338);
             this.txtAvailable.Name = "txtAvailable";
-            this.txtAvailable.Size = new System.Drawing.Size(223, 30);
+            this.txtAvailable.Size = new System.Drawing.Size(313, 30);
             this.txtAvailable.TabIndex = 16;
             // 
             // txtPrice
@@ -131,7 +131,7 @@
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(182, 288);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(223, 30);
+            this.txtPrice.Size = new System.Drawing.Size(313, 30);
             this.txtPrice.TabIndex = 15;
             // 
             // txtDescription
@@ -140,7 +140,7 @@
             this.txtDescription.Location = new System.Drawing.Point(182, 154);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(223, 116);
+            this.txtDescription.Size = new System.Drawing.Size(313, 116);
             this.txtDescription.TabIndex = 14;
             // 
             // txtName
@@ -148,7 +148,7 @@
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(182, 93);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(223, 30);
+            this.txtName.Size = new System.Drawing.Size(313, 30);
             this.txtName.TabIndex = 13;
             // 
             // lbAvailable

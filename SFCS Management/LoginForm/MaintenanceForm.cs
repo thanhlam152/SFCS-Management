@@ -39,7 +39,7 @@ namespace SFCSManagement
         private void DisableSystem()
         {
             enable = false;
-            txtNotification.Text = ("Hệ thống đã bị vô hiệu thống để phục vụ việc bảo trì. Để tái kích hoạt hệ thống, vui lòng chọn Enable.");
+            lbNotification.Text = ("Hệ thống đã bị vô hiệu thống để phục vụ việc bảo trì. Để tái kích hoạt hệ thống, vui lòng chọn Enable.");
             btnEnable.Enabled = true;
             btnDisable.Enabled = false;
             UpdateSystemStatus();
@@ -48,7 +48,7 @@ namespace SFCSManagement
         private void EnableSystem()
         {
             enable = true;
-            txtNotification.Text = ("Để thực hiện bảo trì hệ thống. Vui lòng chọn Disable để tạm thời vô hiệu hóa các dịch vụ online.");
+            lbNotification.Text = ("Để thực hiện bảo trì hệ thống. Vui lòng chọn Disable để tạm thời vô hiệu hóa các dịch vụ online.");
             btnEnable.Enabled = false;
             btnDisable.Enabled = true;
             UpdateSystemStatus();

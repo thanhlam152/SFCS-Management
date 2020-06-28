@@ -36,9 +36,9 @@
             this.pnlBorder = new System.Windows.Forms.Panel();
             this.pnlOption = new System.Windows.Forms.Panel();
             this.btnMaintain = new System.Windows.Forms.Button();
-            this.txtNotification = new System.Windows.Forms.TextBox();
             this.btnDisable = new System.Windows.Forms.Button();
             this.btnEnable = new System.Windows.Forms.Button();
+            this.lbNotification = new System.Windows.Forms.Label();
             this.pnlSystem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoCSE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoHCMUT)).BeginInit();
@@ -118,42 +118,41 @@
             this.btnMaintain.Text = "Bảo trì hệ thống";
             this.btnMaintain.UseVisualStyleBackColor = false;
             // 
-            // txtNotification
-            // 
-            this.txtNotification.BackColor = System.Drawing.Color.White;
-            this.txtNotification.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNotification.Location = new System.Drawing.Point(275, 133);
-            this.txtNotification.Multiline = true;
-            this.txtNotification.Name = "txtNotification";
-            this.txtNotification.ReadOnly = true;
-            this.txtNotification.Size = new System.Drawing.Size(772, 112);
-            this.txtNotification.TabIndex = 4;
-            this.txtNotification.Text = "Để thực hiện bảo trì hệ thống. Vui lòng chọn Disable để tạm thời vô hiệu hóa các " +
-    "dịch vụ online.";
-            // 
             // btnDisable
             // 
-            this.btnDisable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisable.Location = new System.Drawing.Point(405, 318);
+            this.btnDisable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
+            this.btnDisable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisable.ForeColor = System.Drawing.Color.White;
+            this.btnDisable.Location = new System.Drawing.Point(421, 321);
             this.btnDisable.Name = "btnDisable";
             this.btnDisable.Size = new System.Drawing.Size(126, 54);
             this.btnDisable.TabIndex = 5;
             this.btnDisable.Text = "Disable";
-            this.btnDisable.UseVisualStyleBackColor = true;
+            this.btnDisable.UseVisualStyleBackColor = false;
             this.btnDisable.Click += new System.EventHandler(this.btnDisable_Click);
             // 
             // btnEnable
             // 
+            this.btnEnable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
             this.btnEnable.Enabled = false;
-            this.btnEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnable.Location = new System.Drawing.Point(733, 318);
+            this.btnEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnable.ForeColor = System.Drawing.Color.White;
+            this.btnEnable.Location = new System.Drawing.Point(749, 321);
             this.btnEnable.Name = "btnEnable";
             this.btnEnable.Size = new System.Drawing.Size(126, 54);
             this.btnEnable.TabIndex = 6;
             this.btnEnable.Text = "Enable";
-            this.btnEnable.UseVisualStyleBackColor = true;
+            this.btnEnable.UseVisualStyleBackColor = false;
             this.btnEnable.Click += new System.EventHandler(this.btnEnable_Click);
+            // 
+            // lbNotification
+            // 
+            this.lbNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNotification.Location = new System.Drawing.Point(282, 120);
+            this.lbNotification.Name = "lbNotification";
+            this.lbNotification.Size = new System.Drawing.Size(754, 138);
+            this.lbNotification.TabIndex = 7;
+            this.lbNotification.Text = "Notification";
             // 
             // MaintenanceForm
             // 
@@ -161,9 +160,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1083, 635);
+            this.Controls.Add(this.lbNotification);
             this.Controls.Add(this.btnEnable);
             this.Controls.Add(this.btnDisable);
-            this.Controls.Add(this.txtNotification);
             this.Controls.Add(this.pnlOption);
             this.Controls.Add(this.pnlBorder);
             this.Controls.Add(this.pnlSystem);
@@ -179,7 +178,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoHCMUT)).EndInit();
             this.pnlOption.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -192,8 +190,8 @@
         private System.Windows.Forms.PictureBox pbLogoCSE;
         private System.Windows.Forms.Panel pnlOption;
         private System.Windows.Forms.Button btnMaintain;
-        private System.Windows.Forms.TextBox txtNotification;
         private System.Windows.Forms.Button btnDisable;
         private System.Windows.Forms.Button btnEnable;
+        private System.Windows.Forms.Label lbNotification;
     }
 }

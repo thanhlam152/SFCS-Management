@@ -45,9 +45,9 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.pnlLoginArea = new System.Windows.Forms.Panel();
-            this.txtError = new System.Windows.Forms.TextBox();
             this.pnlLine = new System.Windows.Forms.Panel();
             this.lbLogin = new System.Windows.Forms.Label();
+            this.lbError = new System.Windows.Forms.Label();
             this.pnlSystem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoCSE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoHcmut)).BeginInit();
@@ -243,7 +243,7 @@
             // pnlLoginArea
             // 
             this.pnlLoginArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlLoginArea.Controls.Add(this.txtError);
+            this.pnlLoginArea.Controls.Add(this.lbError);
             this.pnlLoginArea.Controls.Add(this.pnlLine);
             this.pnlLoginArea.Controls.Add(this.lbLogin);
             this.pnlLoginArea.Controls.Add(this.btnLogin);
@@ -255,19 +255,6 @@
             this.pnlLoginArea.Name = "pnlLoginArea";
             this.pnlLoginArea.Size = new System.Drawing.Size(606, 344);
             this.pnlLoginArea.TabIndex = 14;
-            // 
-            // txtError
-            // 
-            this.txtError.BackColor = System.Drawing.Color.White;
-            this.txtError.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.txtError.Location = new System.Drawing.Point(19, 212);
-            this.txtError.Multiline = true;
-            this.txtError.Name = "txtError";
-            this.txtError.ReadOnly = true;
-            this.txtError.Size = new System.Drawing.Size(550, 25);
-            this.txtError.TabIndex = 10;
             // 
             // pnlLine
             // 
@@ -287,6 +274,17 @@
             this.lbLogin.Size = new System.Drawing.Size(162, 29);
             this.lbLogin.TabIndex = 0;
             this.lbLogin.Text = "ĐĂNG NHẬP";
+            // 
+            // lbError
+            // 
+            this.lbError.AutoSize = true;
+            this.lbError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lbError.Location = new System.Drawing.Point(15, 219);
+            this.lbError.Name = "lbError";
+            this.lbError.Size = new System.Drawing.Size(89, 20);
+            this.lbError.TabIndex = 15;
+            this.lbError.Text = "Error Text ";
             // 
             // LoginForm
             // 
@@ -313,7 +311,6 @@
             this.pnlLoginArea.ResumeLayout(false);
             this.pnlLoginArea.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -337,7 +334,7 @@
         private System.Windows.Forms.Panel pnlLoginArea;
         private System.Windows.Forms.Label lbLogin;
         private System.Windows.Forms.Panel pnlLine;
-        private System.Windows.Forms.TextBox txtError;
+        private System.Windows.Forms.Label lbError;
     }
 }
 
