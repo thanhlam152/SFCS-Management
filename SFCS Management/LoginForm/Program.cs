@@ -29,6 +29,7 @@ namespace SFCSManagement
 
             return dt.Rows[0]["Name"].ToString();
         }
+
         public static bool checkEnabled()
         {
             SqlConnection sql_cnt = new SqlConnection(ConnectString.connectString);
@@ -61,13 +62,28 @@ namespace SFCSManagement
             return dt;
         } 
 
+        public static DataTable getListOfOrder(int VendorID)
+        {
+            SqlConnection sql_cnt = new SqlConnection(ConnectString.connectString);
+            sql_cnt.Open();
+            SqlCommand scmd = new SqlCommand("select * from OrderDB where VendorID = @VendorID and Done = @Done", sql_cnt);
+            scmd.Parameters.AddWithValue("@VendorID", VendorID.ToString());
+            scmd.Parameters.AddWithValue("@Done", "false");
+            SqlDataAdapter sda = new SqlDataAdapter(scmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            scmd.ExecuteNonQuery();
+            sql_cnt.Close();
+
+            return dt;
+        }
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new OrderListView(1));
-            Application.Run(new OrderDetailsView(1));
+            Application.Run(new OrderListView(1));
         }
     }
 }

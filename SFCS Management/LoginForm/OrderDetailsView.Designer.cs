@@ -124,6 +124,7 @@
             this.btnMenu.TabIndex = 6;
             this.btnMenu.Text = "Thực đơn";
             this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnOrder
             // 
@@ -181,7 +182,7 @@
             this.lbOrderID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOrderID.Location = new System.Drawing.Point(592, 101);
             this.lbOrderID.Name = "lbOrderID";
-            this.lbOrderID.Size = new System.Drawing.Size(0, 25);
+            this.lbOrderID.Size = new System.Drawing.Size(152, 25);
             this.lbOrderID.TabIndex = 2;
             this.lbOrderID.Text = "ID ĐƠN HÀNG. ";
             // 
@@ -192,7 +193,7 @@
             this.lbVendorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
             this.lbVendorName.Location = new System.Drawing.Point(37, 91);
             this.lbVendorName.Name = "lbVendorName";
-            this.lbVendorName.Size = new System.Drawing.Size(0, 40);
+            this.lbVendorName.Size = new System.Drawing.Size(226, 40);
             this.lbVendorName.TabIndex = 1;
             this.lbVendorName.Text = "VENDOR NAME";
             // 

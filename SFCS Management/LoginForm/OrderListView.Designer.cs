@@ -29,31 +29,38 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderListView));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlSystem = new System.Windows.Forms.Panel();
             this.pbLogoCSE = new System.Windows.Forms.PictureBox();
             this.lbSystem = new System.Windows.Forms.Label();
             this.pbLogoHCMUT = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlOption = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlBorder = new System.Windows.Forms.Panel();
             this.pnlOrderList = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.pnlGap = new System.Windows.Forms.Panel();
+            this.pbOrderIcon = new System.Windows.Forms.PictureBox();
+            this.lbOrderList = new System.Windows.Forms.Label();
+            this.lbVendorName = new System.Windows.Forms.Label();
+            this.pnlSystem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoCSE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoHCMUT)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pnlOption.SuspendLayout();
+            this.pnlOrderList.SuspendLayout();
+            this.pnlGap.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOrderIcon)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlSystem
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.pbLogoCSE);
-            this.panel1.Controls.Add(this.lbSystem);
-            this.panel1.Controls.Add(this.pbLogoHCMUT);
-            this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1084, 89);
-            this.panel1.TabIndex = 0;
+            this.pnlSystem.BackColor = System.Drawing.Color.LightGray;
+            this.pnlSystem.Controls.Add(this.pbLogoCSE);
+            this.pnlSystem.Controls.Add(this.lbSystem);
+            this.pnlSystem.Controls.Add(this.pbLogoHCMUT);
+            this.pnlSystem.Location = new System.Drawing.Point(0, -1);
+            this.pnlSystem.Name = "pnlSystem";
+            this.pnlSystem.Size = new System.Drawing.Size(1084, 89);
+            this.pnlSystem.TabIndex = 0;
             // 
             // pbLogoCSE
             // 
@@ -86,15 +93,15 @@
             this.pbLogoHCMUT.TabIndex = 10;
             this.pbLogoHCMUT.TabStop = false;
             // 
-            // panel2
+            // pnlOption
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
-            this.panel2.Controls.Add(this.btnMenu);
-            this.panel2.Controls.Add(this.btnOrder);
-            this.panel2.Location = new System.Drawing.Point(0, 87);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(230, 548);
-            this.panel2.TabIndex = 1;
+            this.pnlOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
+            this.pnlOption.Controls.Add(this.btnMenu);
+            this.pnlOption.Controls.Add(this.btnOrder);
+            this.pnlOption.Location = new System.Drawing.Point(0, 87);
+            this.pnlOption.Name = "pnlOption";
+            this.pnlOption.Size = new System.Drawing.Size(230, 548);
+            this.pnlOption.TabIndex = 1;
             // 
             // btnMenu
             // 
@@ -127,57 +134,108 @@
             this.btnOrder.Text = "Đơn hàng";
             this.btnOrder.UseVisualStyleBackColor = false;
             // 
-            // panel3
+            // pnlBorder
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
-            this.panel3.Location = new System.Drawing.Point(213, 87);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(871, 10);
-            this.panel3.TabIndex = 2;
+            this.pnlBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
+            this.pnlBorder.Location = new System.Drawing.Point(213, 87);
+            this.pnlBorder.Name = "pnlBorder";
+            this.pnlBorder.Size = new System.Drawing.Size(871, 10);
+            this.pnlBorder.TabIndex = 2;
             // 
             // pnlOrderList
             // 
             this.pnlOrderList.AutoScroll = true;
+            this.pnlOrderList.Controls.Add(this.pnlGap);
+            this.pnlOrderList.Controls.Add(this.lbOrderList);
+            this.pnlOrderList.Controls.Add(this.lbVendorName);
             this.pnlOrderList.Location = new System.Drawing.Point(234, 101);
             this.pnlOrderList.Name = "pnlOrderList";
             this.pnlOrderList.Size = new System.Drawing.Size(850, 534);
             this.pnlOrderList.TabIndex = 3;
             // 
-            // OrderForm
+            // pnlGap
+            // 
+            this.pnlGap.Controls.Add(this.pbOrderIcon);
+            this.pnlGap.Location = new System.Drawing.Point(16, 345);
+            this.pnlGap.Name = "pnlGap";
+            this.pnlGap.Size = new System.Drawing.Size(811, 134);
+            this.pnlGap.TabIndex = 2;
+            // 
+            // pbOrderIcon
+            // 
+            this.pbOrderIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbOrderIcon.Image")));
+            this.pbOrderIcon.Location = new System.Drawing.Point(3, 12);
+            this.pbOrderIcon.Name = "pbOrderIcon";
+            this.pbOrderIcon.Size = new System.Drawing.Size(121, 113);
+            this.pbOrderIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbOrderIcon.TabIndex = 0;
+            this.pbOrderIcon.TabStop = false;
+            this.pbOrderIcon.Visible = false;
+            // 
+            // lbOrderList
+            // 
+            this.lbOrderList.AutoSize = true;
+            this.lbOrderList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbOrderList.Location = new System.Drawing.Point(170, 101);
+            this.lbOrderList.Name = "lbOrderList";
+            this.lbOrderList.Size = new System.Drawing.Size(523, 29);
+            this.lbOrderList.TabIndex = 1;
+            this.lbOrderList.Text = "DANH SÁCH ĐƠN HÀNG ĐANG THỰC HIỆN";
+            // 
+            // lbVendorName
+            // 
+            this.lbVendorName.AutoSize = true;
+            this.lbVendorName.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVendorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
+            this.lbVendorName.Location = new System.Drawing.Point(33, 17);
+            this.lbVendorName.Name = "lbVendorName";
+            this.lbVendorName.Size = new System.Drawing.Size(215, 38);
+            this.lbVendorName.TabIndex = 0;
+            this.lbVendorName.Text = "VENDOR NAME";
+            // 
+            // OrderListView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1083, 635);
             this.Controls.Add(this.pnlOrderList);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlBorder);
+            this.Controls.Add(this.pnlOption);
+            this.Controls.Add(this.pnlSystem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "OrderForm";
+            this.Name = "OrderListView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlSystem.ResumeLayout(false);
+            this.pnlSystem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoCSE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoHCMUT)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.pnlOption.ResumeLayout(false);
+            this.pnlOrderList.ResumeLayout(false);
+            this.pnlOrderList.PerformLayout();
+            this.pnlGap.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbOrderIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlSystem;
+        private System.Windows.Forms.Panel pnlOption;
+        private System.Windows.Forms.Panel pnlBorder;
         private System.Windows.Forms.Label lbSystem;
         private System.Windows.Forms.PictureBox pbLogoHCMUT;
         private System.Windows.Forms.PictureBox pbLogoCSE;
         public System.Windows.Forms.Button btnMenu;
         public System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Panel pnlOrderList;
+        private System.Windows.Forms.Label lbOrderList;
+        private System.Windows.Forms.Label lbVendorName;
+        private System.Windows.Forms.Panel pnlGap;
+        private System.Windows.Forms.PictureBox pbOrderIcon;
     }
 }

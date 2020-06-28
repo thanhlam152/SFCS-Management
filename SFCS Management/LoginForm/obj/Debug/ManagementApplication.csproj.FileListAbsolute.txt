@@ -34,18 +34,3 @@ C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\ManagementApplication.csproj
 C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\ManagementApplication.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\LoginForm.exe
 C:\Users\DELL\Desktop\LoginForm\LoginForm\obj\Debug\LoginForm.pdb
-C:\Users\DELL\source\repos\SFCS Management\LoginForm\bin\Debug\LoginForm.exe.config
-C:\Users\DELL\source\repos\SFCS Management\LoginForm\bin\Debug\LoginForm.exe
-C:\Users\DELL\source\repos\SFCS Management\LoginForm\bin\Debug\LoginForm.pdb
-C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\ManagementApplication.csprojAssemblyReference.cache
-C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\SFCSManagement.EditForm.resources
-C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\SFCSManagement.MaintenanceForm.resources
-C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\SFCSManagement.MenuView.resources
-C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\SFCSManagement.OrderDetailsView.resources
-C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\SFCSManagement.OrderListView.resources
-C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\SFCSManagement.LoginForm.resources
-C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\LoginForm.Properties.Resources.resources
-C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\ManagementApplication.csproj.GenerateResource.cache
-C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\ManagementApplication.csproj.CoreCompileInputs.cache
-C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\LoginForm.exe
-C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\LoginForm.pdb

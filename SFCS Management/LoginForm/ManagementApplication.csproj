@@ -151,6 +151,7 @@
     <Content Include="Resources\back_icon.png" />
     <Content Include="Resources\engineer.png" />
     <Content Include="Resources\manager.png" />
+    <None Include="Resources\order.png" />
     <None Include="Resources\cse.png" />
     <None Include="Resources\hcmut.png" />
   </ItemGroup>

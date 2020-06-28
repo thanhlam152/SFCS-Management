@@ -115,5 +115,10 @@ namespace SFCSManagement
 
             return (int)dt.Rows[0]["VendorID"];
         }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+         
+        }
     }
 }
