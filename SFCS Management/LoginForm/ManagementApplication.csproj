@@ -84,11 +84,17 @@
     <Compile Include="MenuForm.Designer.cs">
       <DependentUpon>MenuView.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderForm.cs">
+    <Compile Include="OrderDetailsView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderForm.Designer.cs">
-      <DependentUpon>OrderForm.cs</DependentUpon>
+    <Compile Include="OrderDetailsView.Designer.cs">
+      <DependentUpon>OrderDetailsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderListView.Designer.cs">
+      <DependentUpon>OrderListView.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -107,8 +113,11 @@
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderForm.resx">
-      <DependentUpon>OrderForm.cs</DependentUpon>
+    <EmbeddedResource Include="OrderDetailsView.resx">
+      <DependentUpon>OrderDetailsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderListView.resx">
+      <DependentUpon>OrderListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

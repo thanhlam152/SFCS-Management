@@ -1,4 +1,4 @@
-﻿namespace LoginForm
+﻿namespace SFCSManagement
 {
     partial class MaintenanceForm
     {
@@ -28,80 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaintenanceForm));
+            this.pnlSystem = new System.Windows.Forms.Panel();
+            this.pbLogoCSE = new System.Windows.Forms.PictureBox();
+            this.lbSystemName = new System.Windows.Forms.Label();
+            this.pbLogoHCMUT = new System.Windows.Forms.PictureBox();
+            this.pnlBorder = new System.Windows.Forms.Panel();
+            this.pnlOption = new System.Windows.Forms.Panel();
             this.btnMaintain = new System.Windows.Forms.Button();
-            this.txtNote = new System.Windows.Forms.TextBox();
+            this.txtNotification = new System.Windows.Forms.TextBox();
             this.btnDisable = new System.Windows.Forms.Button();
             this.btnEnable = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pnlSystem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoCSE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoHCMUT)).BeginInit();
+            this.pnlOption.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlSystem
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1084, 89);
-            this.panel1.TabIndex = 0;
+            this.pnlSystem.BackColor = System.Drawing.Color.LightGray;
+            this.pnlSystem.Controls.Add(this.pbLogoCSE);
+            this.pnlSystem.Controls.Add(this.lbSystemName);
+            this.pnlSystem.Controls.Add(this.pbLogoHCMUT);
+            this.pnlSystem.Location = new System.Drawing.Point(0, -1);
+            this.pnlSystem.Name = "pnlSystem";
+            this.pnlSystem.Size = new System.Drawing.Size(1084, 89);
+            this.pnlSystem.TabIndex = 0;
             // 
-            // pictureBox2
+            // pbLogoCSE
             // 
-            this.pictureBox2.Image = global::SFCSManagement.Properties.Resources.cse;
-            this.pictureBox2.Location = new System.Drawing.Point(991, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
+            this.pbLogoCSE.Image = ((System.Drawing.Image)(resources.GetObject("pbLogoCSE.Image")));
+            this.pbLogoCSE.Location = new System.Drawing.Point(991, 11);
+            this.pbLogoCSE.Name = "pbLogoCSE";
+            this.pbLogoCSE.Size = new System.Drawing.Size(70, 70);
+            this.pbLogoCSE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogoCSE.TabIndex = 12;
+            this.pbLogoCSE.TabStop = false;
             // 
-            // label5
+            // lbSystemName
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
-            this.label5.Location = new System.Drawing.Point(116, 27);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(310, 30);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Smart Food Court System";
+            this.lbSystemName.AutoSize = true;
+            this.lbSystemName.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSystemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
+            this.lbSystemName.Location = new System.Drawing.Point(116, 27);
+            this.lbSystemName.Name = "lbSystemName";
+            this.lbSystemName.Size = new System.Drawing.Size(310, 30);
+            this.lbSystemName.TabIndex = 11;
+            this.lbSystemName.Text = "Smart Food Court System";
             // 
-            // pictureBox1
+            // pbLogoHCMUT
             // 
-            this.pictureBox1.Image = global::SFCSManagement.Properties.Resources.hcmut;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.pbLogoHCMUT.Image = ((System.Drawing.Image)(resources.GetObject("pbLogoHCMUT.Image")));
+            this.pbLogoHCMUT.Location = new System.Drawing.Point(29, 11);
+            this.pbLogoHCMUT.Name = "pbLogoHCMUT";
+            this.pbLogoHCMUT.Size = new System.Drawing.Size(70, 70);
+            this.pbLogoHCMUT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogoHCMUT.TabIndex = 10;
+            this.pbLogoHCMUT.TabStop = false;
             // 
-            // panel3
+            // pnlBorder
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
-            this.panel3.Location = new System.Drawing.Point(213, 87);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(871, 10);
-            this.panel3.TabIndex = 2;
+            this.pnlBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
+            this.pnlBorder.Location = new System.Drawing.Point(213, 87);
+            this.pnlBorder.Name = "pnlBorder";
+            this.pnlBorder.Size = new System.Drawing.Size(871, 10);
+            this.pnlBorder.TabIndex = 2;
             // 
-            // panel2
+            // pnlOption
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
-            this.panel2.Controls.Add(this.btnMaintain);
-            this.panel2.Location = new System.Drawing.Point(0, 87);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(230, 548);
-            this.panel2.TabIndex = 3;
+            this.pnlOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
+            this.pnlOption.Controls.Add(this.btnMaintain);
+            this.pnlOption.Location = new System.Drawing.Point(0, 87);
+            this.pnlOption.Name = "pnlOption";
+            this.pnlOption.Size = new System.Drawing.Size(230, 548);
+            this.pnlOption.TabIndex = 3;
             // 
             // btnMaintain
             // 
@@ -117,18 +118,18 @@
             this.btnMaintain.Text = "Bảo trì hệ thống";
             this.btnMaintain.UseVisualStyleBackColor = false;
             // 
-            // txtNote
+            // txtNotification
             // 
-            this.txtNote.BackColor = System.Drawing.Color.White;
-            this.txtNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNote.Location = new System.Drawing.Point(275, 133);
-            this.txtNote.Multiline = true;
-            this.txtNote.Name = "txtNote";
-            this.txtNote.ReadOnly = true;
-            this.txtNote.Size = new System.Drawing.Size(772, 112);
-            this.txtNote.TabIndex = 4;
-            this.txtNote.Text = "Để thực hiện bảo trì hệ thống. Vui lòng chọn Disable để tạm thời vô hiệu hóa các " +
+            this.txtNotification.BackColor = System.Drawing.Color.White;
+            this.txtNotification.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNotification.Location = new System.Drawing.Point(275, 133);
+            this.txtNotification.Multiline = true;
+            this.txtNotification.Name = "txtNotification";
+            this.txtNotification.ReadOnly = true;
+            this.txtNotification.Size = new System.Drawing.Size(772, 112);
+            this.txtNotification.TabIndex = 4;
+            this.txtNotification.Text = "Để thực hiện bảo trì hệ thống. Vui lòng chọn Disable để tạm thời vô hiệu hóa các " +
     "dịch vụ online.";
             // 
             // btnDisable
@@ -162,21 +163,21 @@
             this.ClientSize = new System.Drawing.Size(1083, 635);
             this.Controls.Add(this.btnEnable);
             this.Controls.Add(this.btnDisable);
-            this.Controls.Add(this.txtNote);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txtNotification);
+            this.Controls.Add(this.pnlOption);
+            this.Controls.Add(this.pnlBorder);
+            this.Controls.Add(this.pnlSystem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MaintenanceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.pnlSystem.ResumeLayout(false);
+            this.pnlSystem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoCSE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoHCMUT)).EndInit();
+            this.pnlOption.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,14 +185,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlSystem;
+        private System.Windows.Forms.Panel pnlBorder;
+        private System.Windows.Forms.Label lbSystemName;
+        private System.Windows.Forms.PictureBox pbLogoHCMUT;
+        private System.Windows.Forms.PictureBox pbLogoCSE;
+        private System.Windows.Forms.Panel pnlOption;
         private System.Windows.Forms.Button btnMaintain;
-        private System.Windows.Forms.TextBox txtNote;
+        private System.Windows.Forms.TextBox txtNotification;
         private System.Windows.Forms.Button btnDisable;
         private System.Windows.Forms.Button btnEnable;
     }

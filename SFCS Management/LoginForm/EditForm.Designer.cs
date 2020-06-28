@@ -1,4 +1,4 @@
-﻿namespace LoginForm
+﻿namespace SFCSManagement
 {
     partial class EditForm
     {

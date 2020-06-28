@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace LoginForm
+namespace SFCSManagement
 {
     public partial class MenuView : Form
     {

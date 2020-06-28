@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LoginForm
+namespace SFCSManagement
 {
     public partial class LoginForm : Form
     {
@@ -52,60 +52,41 @@ namespace LoginForm
         {
             String username = txtUsername.Text;
             String password = txtPassword.Text;
-            txtMissedInput.Text = "";
+            txtError.Text = "";
 
             if (username == String.Empty || password == String.Empty)
             {
-                txtMissedInput.Text = "Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu";
+                txtError.Text = "Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu";
             }
             else
             {
                 int vendorID = Authentication.authenticate(username, password, type);
-                if (vendorID == -1) txtMissedInput.Text = "Không tìm thấy tài khoản.";
+                if (vendorID == -1) txtError.Text = "Không tìm thấy tài khoản.";
                 else
                 {
-                    txtMissedInput.Text = vendorID.ToString();
-                    if (vendorID == 0)
+                    txtError.Text = vendorID.ToString();
+                    switch(type)
                     {
-                        Program.openMaintenanceForm();
-                        this.Close();
+                        case 0:
+                            //Program.openMaintenanceForm();
+                            MaintenanceForm maintenanceForm = new MaintenanceForm();
+                            maintenanceForm.ShowDialog();
+                            this.Close();
+                            break;
+                        case 1:
+                            this.Close();
+                            break;
+                        case 2:
+                            OrderListView orderForm = new OrderListView(vendorID);
+                            orderForm.ShowDialog();
+                            this.Close();
+                            break;
+                        default:
+                            MessageBox.Show("Vui lòng kiểm tra lại database");
+                            break;
                     }
                 }
             }
-        }           
-        public void btnMenu_Click(object sender, EventArgs e)
-        {
-            createMenuView();
-        }
-
-        private void btnOrder_Click(object sender, EventArgs e)
-        {
-            createOrderForm();
-        }
-
-        private void childForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            txtPassword.Text = null;
-            txtUsername.Text = null;
-            this.Show();
-        }
-
-        private void createMenuView()
-        {
-            this.Hide();
-            MenuView menuView = new MenuView();
-            menuView.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
-            menuView.FormClosed += new FormClosedEventHandler(childForm_FormClosed);
-            menuView.Show(this);
-        }
-
-        private void createOrderForm()
-        {
-            this.Hide();
-            OrderForm orderForm = new OrderForm();
-            orderForm.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            orderForm.FormClosed += new FormClosedEventHandler(childForm_FormClosed);
-            orderForm.Show(this);
         }
     }
 }
