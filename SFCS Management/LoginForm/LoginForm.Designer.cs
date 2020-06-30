@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.pnlSystem = new System.Windows.Forms.Panel();
             this.pbLogoCSE = new System.Windows.Forms.PictureBox();
@@ -45,9 +46,10 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.pnlLoginArea = new System.Windows.Forms.Panel();
+            this.lbError = new System.Windows.Forms.Label();
             this.pnlLine = new System.Windows.Forms.Panel();
             this.lbLogin = new System.Windows.Forms.Label();
-            this.lbError = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pnlSystem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoCSE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoHcmut)).BeginInit();
@@ -256,6 +258,17 @@
             this.pnlLoginArea.Size = new System.Drawing.Size(606, 344);
             this.pnlLoginArea.TabIndex = 14;
             // 
+            // lbError
+            // 
+            this.lbError.AutoSize = true;
+            this.lbError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lbError.Location = new System.Drawing.Point(15, 219);
+            this.lbError.Name = "lbError";
+            this.lbError.Size = new System.Drawing.Size(89, 20);
+            this.lbError.TabIndex = 15;
+            this.lbError.Text = "Error Text ";
+            // 
             // pnlLine
             // 
             this.pnlLine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -275,16 +288,11 @@
             this.lbLogin.TabIndex = 0;
             this.lbLogin.Text = "ĐĂNG NHẬP";
             // 
-            // lbError
+            // contextMenuStrip1
             // 
-            this.lbError.AutoSize = true;
-            this.lbError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lbError.Location = new System.Drawing.Point(15, 219);
-            this.lbError.Name = "lbError";
-            this.lbError.Size = new System.Drawing.Size(89, 20);
-            this.lbError.TabIndex = 15;
-            this.lbError.Text = "Error Text ";
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // LoginForm
             // 
@@ -335,6 +343,7 @@
         private System.Windows.Forms.Label lbLogin;
         private System.Windows.Forms.Panel pnlLine;
         private System.Windows.Forms.Label lbError;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 

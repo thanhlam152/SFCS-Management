@@ -37,6 +37,7 @@ namespace SFCSManagement
                 Label lbSymbolVND = new Label();
                 Label lbTotal = new Label();
                 Label lbOrderID = new Label();
+                Label lbDatetime = new Label();
                 PictureBox pbOrderIcon = new PictureBox();
 
                 pnlOrderList.Controls.Add(pnlOrder);
@@ -47,6 +48,7 @@ namespace SFCSManagement
                 pnlOrder.Controls.Add(lbSymbolVND);
                 pnlOrder.Controls.Add(lbOrderID);
                 pnlOrder.Controls.Add(pbOrderIcon);
+                pnlOrder.Controls.Add(lbDatetime);
                 pnlOrder.Location = new System.Drawing.Point(13, 162 + 98 * i);
                 pnlOrder.Size = new System.Drawing.Size(650, 98);
 
@@ -65,13 +67,18 @@ namespace SFCSManagement
                 btnView.Name = dt.Rows[i]["ID"].ToString();
                 btnView.Click += (sender, EventArgs) => { btnView_Click(sender, EventArgs); };
 
+                lbDatetime.AutoSize = true;
+                lbDatetime.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                lbDatetime.Location = new System.Drawing.Point(90, 50);
+                lbDatetime.Text = dt.Rows[i]["Datetime"].ToString();
+
                 lbTotal.AutoSize = true;
                 lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                lbTotal.Location = new System.Drawing.Point(100, 50);
+                lbTotal.Location = new System.Drawing.Point(400, 30);
                 lbTotal.Text = dt.Rows[i]["Total"].ToString();
 
                 lbSymbolVND.AutoSize = true;
-                lbSymbolVND.Location = new System.Drawing.Point(90, 50);
+                lbSymbolVND.Location = new System.Drawing.Point(392, 30);
                 lbSymbolVND.Text = "đ";
 
                 lbOrderID.AutoSize = true;

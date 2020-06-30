@@ -49,3 +49,4 @@ C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\ManagementApplica
 C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\LoginForm.exe
 C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\LoginForm.pdb
 C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\ManagementApplication.csprojAssemblyReference.cache
+C:\Users\DELL\source\repos\SFCS Management\LoginForm\obj\Debug\LoginForm.SystemReportView.resources
