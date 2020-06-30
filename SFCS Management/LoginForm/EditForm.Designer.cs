@@ -33,11 +33,9 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.pbItemImage = new System.Windows.Forms.PictureBox();
-            this.txtAvailable = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.lbAvailable = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbDescription = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
@@ -50,6 +48,7 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.pnlBorder = new System.Windows.Forms.Panel();
+            this.cbAvailable = new System.Windows.Forms.CheckBox();
             this.pnlEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbItemImage)).BeginInit();
             this.pnlSystem.SuspendLayout();
@@ -62,14 +61,13 @@
             // 
             this.pnlEdit.AutoScroll = true;
             this.pnlEdit.BackColor = System.Drawing.Color.Transparent;
+            this.pnlEdit.Controls.Add(this.cbAvailable);
             this.pnlEdit.Controls.Add(this.btnBack);
             this.pnlEdit.Controls.Add(this.btnBrowse);
             this.pnlEdit.Controls.Add(this.pbItemImage);
-            this.pnlEdit.Controls.Add(this.txtAvailable);
             this.pnlEdit.Controls.Add(this.txtPrice);
             this.pnlEdit.Controls.Add(this.txtDescription);
             this.pnlEdit.Controls.Add(this.txtName);
-            this.pnlEdit.Controls.Add(this.lbAvailable);
             this.pnlEdit.Controls.Add(this.lbPrice);
             this.pnlEdit.Controls.Add(this.lbDescription);
             this.pnlEdit.Controls.Add(this.lbName);
@@ -118,14 +116,6 @@
             this.pbItemImage.TabIndex = 17;
             this.pbItemImage.TabStop = false;
             // 
-            // txtAvailable
-            // 
-            this.txtAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAvailable.Location = new System.Drawing.Point(182, 338);
-            this.txtAvailable.Name = "txtAvailable";
-            this.txtAvailable.Size = new System.Drawing.Size(313, 30);
-            this.txtAvailable.TabIndex = 16;
-            // 
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,16 +140,6 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(313, 30);
             this.txtName.TabIndex = 13;
-            // 
-            // lbAvailable
-            // 
-            this.lbAvailable.AutoSize = true;
-            this.lbAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAvailable.Location = new System.Drawing.Point(60, 341);
-            this.lbAvailable.Name = "lbAvailable";
-            this.lbAvailable.Size = new System.Drawing.Size(98, 25);
-            this.lbAvailable.TabIndex = 12;
-            this.lbAvailable.Text = "Còn hàng";
             // 
             // lbPrice
             // 
@@ -295,6 +275,19 @@
             this.pnlBorder.Size = new System.Drawing.Size(871, 10);
             this.pnlBorder.TabIndex = 6;
             // 
+            // cbAvailable
+            // 
+            this.cbAvailable.AutoSize = true;
+            this.cbAvailable.Checked = true;
+            this.cbAvailable.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAvailable.Location = new System.Drawing.Point(182, 354);
+            this.cbAvailable.Name = "cbAvailable";
+            this.cbAvailable.Size = new System.Drawing.Size(97, 29);
+            this.cbAvailable.TabIndex = 21;
+            this.cbAvailable.Text = "Có sẵn";
+            this.cbAvailable.UseVisualStyleBackColor = true;
+            // 
             // EditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -333,16 +326,15 @@
         public System.Windows.Forms.Button btnMenu;
         public System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Panel pnlBorder;
-        private System.Windows.Forms.TextBox txtAvailable;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label lbAvailable;
         private System.Windows.Forms.Label lbPrice;
         private System.Windows.Forms.Label lbDescription;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.PictureBox pbItemImage;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.CheckBox cbAvailable;
     }
 }

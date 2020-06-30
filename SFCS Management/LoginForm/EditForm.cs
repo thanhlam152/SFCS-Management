@@ -89,7 +89,7 @@ namespace SFCSManagement
             scmd.Parameters.AddWithValue("@Name", txtName.Text);
             scmd.Parameters.AddWithValue("@Price", Int64.Parse(txtPrice.Text));
             scmd.Parameters.AddWithValue("@VendorID", VendorID);
-            scmd.Parameters.AddWithValue("@Available", txtAvailable.Text);
+            scmd.Parameters.AddWithValue("@Available", cbAvailable.Checked);
             scmd.Parameters.AddWithValue("@Description", txtDescription.Text);
 
             scmd.ExecuteNonQuery();
@@ -121,7 +121,7 @@ namespace SFCSManagement
             scmd.Parameters.AddWithValue("@Name", txtName.Text);
             scmd.Parameters.AddWithValue("@Price", Int64.Parse(txtPrice.Text));
             scmd.Parameters.AddWithValue("@VendorID", VendorID);
-            scmd.Parameters.AddWithValue("@Available", txtAvailable.Text);
+            scmd.Parameters.AddWithValue("@Available", cbAvailable.Checked);
             scmd.Parameters.AddWithValue("@Description", txtDescription.Text);
             scmd.Parameters.AddWithValue("@ItemID", ItemID);
 
@@ -144,7 +144,7 @@ namespace SFCSManagement
             txtName.Text = dt.Rows[0]["Name"].ToString();
             txtDescription.Text = dt.Rows[0]["Description"].ToString();
             txtPrice.Text = dt.Rows[0]["Price"].ToString();
-            txtAvailable.Text = dt.Rows[0]["Available"].ToString();
+            cbAvailable.Checked = (bool)dt.Rows[0]["Available"];
 
             if (!dt.Rows[0]["Image"].Equals(System.DBNull.Value))
             {

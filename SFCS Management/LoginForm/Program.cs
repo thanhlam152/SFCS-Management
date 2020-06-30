@@ -108,7 +108,7 @@ namespace SFCSManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MaintenanceForm());
+            Application.Run(new LoginForm());
         }
     }
 }
