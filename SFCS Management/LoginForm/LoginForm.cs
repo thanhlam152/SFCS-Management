@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoginForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -69,11 +70,16 @@ namespace SFCSManagement
                     switch(type)
                     {
                         case 0:
-                            //Program.openMaintenanceForm();
                             MaintenanceForm maintenanceForm = new MaintenanceForm();
                             maintenanceForm.ShowDialog();
                             break;
                         case 1:
+                            if (vendorID == 0)
+                            {
+                                SystemReportView reportView = new SystemReportView(0, 0);
+                                reportView.ShowDialog();
+                                break;
+                            }
                             break;
                         case 2:
                             OrderListView orderForm = new OrderListView(vendorID);

@@ -37,6 +37,11 @@
             this.btnReport = new System.Windows.Forms.Button();
             this.pnlBorder = new System.Windows.Forms.Panel();
             this.pnlReport = new System.Windows.Forms.Panel();
+            this.btnView = new System.Windows.Forms.Button();
+            this.lbYear = new System.Windows.Forms.Label();
+            this.cbYear = new System.Windows.Forms.ComboBox();
+            this.lbMonth = new System.Windows.Forms.Label();
+            this.cbMonth = new System.Windows.Forms.ComboBox();
             this.pnlGrandTotals = new System.Windows.Forms.Panel();
             this.pnlLine = new System.Windows.Forms.Panel();
             this.lbTotalPercent = new System.Windows.Forms.Label();
@@ -139,6 +144,11 @@
             // pnlReport
             // 
             this.pnlReport.AutoScroll = true;
+            this.pnlReport.Controls.Add(this.btnView);
+            this.pnlReport.Controls.Add(this.lbYear);
+            this.pnlReport.Controls.Add(this.cbYear);
+            this.pnlReport.Controls.Add(this.lbMonth);
+            this.pnlReport.Controls.Add(this.cbMonth);
             this.pnlReport.Controls.Add(this.pnlGrandTotals);
             this.pnlReport.Controls.Add(this.pnlInit);
             this.pnlReport.Controls.Add(this.lbReport);
@@ -147,6 +157,83 @@
             this.pnlReport.Size = new System.Drawing.Size(850, 534);
             this.pnlReport.TabIndex = 3;
             // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
+            this.btnView.FlatAppearance.BorderSize = 0;
+            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.ForeColor = System.Drawing.Color.White;
+            this.btnView.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnView.Location = new System.Drawing.Point(661, 112);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(105, 54);
+            this.btnView.TabIndex = 8;
+            this.btnView.Text = "Xem";
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
+            // lbYear
+            // 
+            this.lbYear.AutoSize = true;
+            this.lbYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
+            this.lbYear.Location = new System.Drawing.Point(383, 129);
+            this.lbYear.Name = "lbYear";
+            this.lbYear.Size = new System.Drawing.Size(49, 20);
+            this.lbYear.TabIndex = 7;
+            this.lbYear.Text = "NĂM";
+            // 
+            // cbYear
+            // 
+            this.cbYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbYear.FormattingEnabled = true;
+            this.cbYear.Items.AddRange(new object[] {
+            "All",
+            "2019",
+            "2020",
+            "2021"});
+            this.cbYear.Location = new System.Drawing.Point(438, 126);
+            this.cbYear.Name = "cbYear";
+            this.cbYear.Size = new System.Drawing.Size(121, 28);
+            this.cbYear.TabIndex = 6;
+            this.cbYear.Text = "All";
+            // 
+            // lbMonth
+            // 
+            this.lbMonth.AutoSize = true;
+            this.lbMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(204)))));
+            this.lbMonth.Location = new System.Drawing.Point(71, 129);
+            this.lbMonth.Name = "lbMonth";
+            this.lbMonth.Size = new System.Drawing.Size(73, 20);
+            this.lbMonth.TabIndex = 5;
+            this.lbMonth.Text = "THÁNG";
+            // 
+            // cbMonth
+            // 
+            this.cbMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMonth.FormattingEnabled = true;
+            this.cbMonth.Items.AddRange(new object[] {
+            "All",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.cbMonth.Location = new System.Drawing.Point(154, 126);
+            this.cbMonth.Name = "cbMonth";
+            this.cbMonth.Size = new System.Drawing.Size(121, 28);
+            this.cbMonth.TabIndex = 4;
+            this.cbMonth.Text = "All";
+            // 
             // pnlGrandTotals
             // 
             this.pnlGrandTotals.Controls.Add(this.pnlLine);
@@ -154,9 +241,9 @@
             this.pnlGrandTotals.Controls.Add(this.lbTotalProfits);
             this.pnlGrandTotals.Controls.Add(this.lbTotalOrders);
             this.pnlGrandTotals.Controls.Add(this.lbGrandTotals);
-            this.pnlGrandTotals.Location = new System.Drawing.Point(15, 195);
+            this.pnlGrandTotals.Location = new System.Drawing.Point(15, 254);
             this.pnlGrandTotals.Name = "pnlGrandTotals";
-            this.pnlGrandTotals.Size = new System.Drawing.Size(812, 160);
+            this.pnlGrandTotals.Size = new System.Drawing.Size(812, 130);
             this.pnlGrandTotals.TabIndex = 3;
             // 
             // pnlLine
@@ -217,7 +304,7 @@
             this.pnlInit.Controls.Add(this.lbProfits);
             this.pnlInit.Controls.Add(this.lbOrders);
             this.pnlInit.Controls.Add(this.lbVendor);
-            this.pnlInit.Location = new System.Drawing.Point(15, 137);
+            this.pnlInit.Location = new System.Drawing.Point(15, 196);
             this.pnlInit.Name = "pnlInit";
             this.pnlInit.Size = new System.Drawing.Size(812, 63);
             this.pnlInit.TabIndex = 2;
@@ -361,5 +448,10 @@
         private System.Windows.Forms.Label lbProfits;
         private System.Windows.Forms.Label lbOrders;
         private System.Windows.Forms.Label lbVendor;
+        private System.Windows.Forms.ComboBox cbMonth;
+        public System.Windows.Forms.Button btnView;
+        private System.Windows.Forms.Label lbYear;
+        private System.Windows.Forms.ComboBox cbYear;
+        private System.Windows.Forms.Label lbMonth;
     }
 }

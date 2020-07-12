@@ -109,7 +109,7 @@ namespace SFCSManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SystemReportView());
+            Application.Run(new LoginForm());
         }
     }
 }

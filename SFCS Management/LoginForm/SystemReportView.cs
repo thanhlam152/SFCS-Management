@@ -17,10 +17,16 @@ namespace LoginForm
     public partial class SystemReportView : Form
     {
         private List<Vendor> VendorsList;
+        int Month;
+        int Year;
 
-        public SystemReportView()
+        public SystemReportView(int month, int year)
         {
+            this.Month = month;
+            this.Year = year;
             InitializeComponent();
+            cbMonth.Text = (month == 0) ? "All" : month.ToString();
+            cbYear.Text = (year == 0) ? "All" : year.ToString();
             VendorsList = createListOfVendors();
             updateVendorsList(ref VendorsList);
             viewSystemReport();
@@ -82,9 +88,13 @@ namespace LoginForm
                 {
                     if (vendorList[i].ID == (int)row["VendorID"])
                     {
-                        Vendor vendor = vendorList[i];
-                        vendor.NumOfOrders++;
-                        vendor.Profits += (Int64)row["Total"];
+                        DateTime orderDate = (DateTime)row["Datetime"];
+                        if (((this.Month == 0) || (this.Month == orderDate.Month)) && ((this.Year == 0) || (this.Year == orderDate.Year)))
+                        {
+                            Vendor vendor = vendorList[i];
+                            vendor.NumOfOrders++;
+                            vendor.Profits += (Int64)row["Total"];
+                        }
                     }
                 }
             }
@@ -116,8 +126,8 @@ namespace LoginForm
                 pnlVendorView.Controls.Add(lbVendorProfits);
                 pnlVendorView.Controls.Add(lbVendorOrders);
                 pnlVendorView.Controls.Add(lbVendorName);
-                pnlVendorView.Location = new System.Drawing.Point(12, 156 + 64 * i);
-                pnlVendorView.Size = new System.Drawing.Size(650, 64);
+                pnlVendorView.Location = new System.Drawing.Point(12, 206 + 51 * i);
+                pnlVendorView.Size = new System.Drawing.Size(650, 51);
 
                 pnlLine.BackColor = System.Drawing.SystemColors.GrayText;
                 pnlLine.Location = new System.Drawing.Point(14, 50);
@@ -150,7 +160,17 @@ namespace LoginForm
 
             lbTotalOrders.Text = allVendors.NumOfOrders.ToString();
             lbTotalProfits.Text = allVendors.Profits.ToString();
-            pnlGrandTotals.Location = new Point(pnlGrandTotals.Location.X, 156 + 64 * VendorsList.Count);
+            pnlGrandTotals.Location = new Point(pnlGrandTotals.Location.X, 206 + 51 * VendorsList.Count);
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            int month = (cbMonth.Text == "All") ? 0 : Int32.Parse(cbMonth.Text);
+            int year = (cbYear.Text == "All") ? 0 : Int32.Parse(cbYear.Text);
+            SystemReportView reportView = new SystemReportView(month, year);
+            this.Hide();
+            reportView.ShowDialog();
+            this.Close();
         }
     }
 }
