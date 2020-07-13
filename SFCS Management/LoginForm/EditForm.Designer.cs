@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             this.pnlEdit = new System.Windows.Forms.Panel();
+            this.cbAvailable = new System.Windows.Forms.CheckBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.pbItemImage = new System.Windows.Forms.PictureBox();
@@ -48,7 +49,6 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.pnlBorder = new System.Windows.Forms.Panel();
-            this.cbAvailable = new System.Windows.Forms.CheckBox();
             this.pnlEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbItemImage)).BeginInit();
             this.pnlSystem.SuspendLayout();
@@ -76,6 +76,19 @@
             this.pnlEdit.Name = "pnlEdit";
             this.pnlEdit.Size = new System.Drawing.Size(851, 534);
             this.pnlEdit.TabIndex = 4;
+            // 
+            // cbAvailable
+            // 
+            this.cbAvailable.AutoSize = true;
+            this.cbAvailable.Checked = true;
+            this.cbAvailable.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAvailable.Location = new System.Drawing.Point(182, 354);
+            this.cbAvailable.Name = "cbAvailable";
+            this.cbAvailable.Size = new System.Drawing.Size(97, 29);
+            this.cbAvailable.TabIndex = 21;
+            this.cbAvailable.Text = "Có sẵn";
+            this.cbAvailable.UseVisualStyleBackColor = true;
             // 
             // btnBack
             // 
@@ -274,19 +287,6 @@
             this.pnlBorder.Name = "pnlBorder";
             this.pnlBorder.Size = new System.Drawing.Size(871, 10);
             this.pnlBorder.TabIndex = 6;
-            // 
-            // cbAvailable
-            // 
-            this.cbAvailable.AutoSize = true;
-            this.cbAvailable.Checked = true;
-            this.cbAvailable.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAvailable.Location = new System.Drawing.Point(182, 354);
-            this.cbAvailable.Name = "cbAvailable";
-            this.cbAvailable.Size = new System.Drawing.Size(97, 29);
-            this.cbAvailable.TabIndex = 21;
-            this.cbAvailable.Text = "Có sẵn";
-            this.cbAvailable.UseVisualStyleBackColor = true;
             // 
             // EditForm
             // 

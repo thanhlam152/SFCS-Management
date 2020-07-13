@@ -74,12 +74,9 @@ namespace SFCSManagement
                             maintenanceForm.ShowDialog();
                             break;
                         case 1:
-                            if (vendorID == 0)
-                            {
-                                SystemReportView reportView = new SystemReportView(0, 0);
-                                reportView.ShowDialog();
-                                break;
-                            }
+                            SystemReportView systemReportView;
+                            systemReportView = (vendorID == 0) ? new SystemReportView(0, 0) : new SystemReportView(vendorID);
+                            systemReportView.ShowDialog();
                             break;
                         case 2:
                             OrderListView orderForm = new OrderListView(vendorID);
