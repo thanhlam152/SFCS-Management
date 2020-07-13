@@ -20,6 +20,14 @@ namespace LoginForm
         int Month;
         int Year;
 
+        public SystemReportView(int vendorID) 
+        {
+            InitializeComponent();
+            pnlReport.Controls.Clear();
+            VendorReport view_Report = new VendorReport(vendorID);
+            pnlReport.Controls.Add(view_Report);
+        }
+
         public SystemReportView(int month, int year)
         {
             this.Month = month;
@@ -61,7 +69,7 @@ namespace LoginForm
             scmd.ExecuteNonQuery();
             sql_cnt.Close();
 
-            foreach(DataRow row in dt.Rows)
+            foreach (DataRow row in dt.Rows)
             {
                 Vendor vendor = new Vendor((int)row["ID"], row["Name"].ToString());
                 vendorList.Add(vendor);
@@ -112,7 +120,7 @@ namespace LoginForm
 
             for (int i = 0; i < VendorsList.Count; ++i)
             {
-                Panel pnlVendorView  = new Panel();
+                Panel pnlVendorView = new Panel();
                 Panel pnlLine = new Panel();
                 Label lbVendorPercent = new Label();
                 Label lbVendorProfits = new Label();
